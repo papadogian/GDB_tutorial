@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h> /* for atoi */
 #include <getopt.h> /* for getopt */
-
+#include <unistd.h> /* for sleep */
 
 /*
  * Defines a sample struct 'a_struct' that contains a 
@@ -111,9 +111,11 @@ main(int argc, char *argv[])
 		printf("undefined input\n");
 		goto l_exit;
 	}
-	
+
 /* label to exit: print and finish */
 l_exit:
+	/*sleep(6);*/
+
 	printf("main exits now.\n");
 	return 0;
 }
