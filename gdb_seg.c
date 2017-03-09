@@ -9,7 +9,6 @@
  */
 
 #include <stdio.h>
-#include <string.h> /* for strlen */
 #include <stdlib.h> /* for atoi */
 #include <getopt.h> /* for getopt */
 
