@@ -22,6 +22,18 @@ struct a_struct {
 	char *str_content;
 };
 
+/*
+ * Set the str_content of struct x with str.
+ * If success, return 0, otherwise return -1.
+ */
+int
+set_struct(struct a_struct *x, char *str)
+{
+	if ((x->str_content = str))
+		return 0;
+	else 
+		return -1;
+}
 
 /*
  * Parses the options given.
@@ -32,9 +44,11 @@ struct a_struct {
  * If -c is 0, the program returns successfully.
  * If -c is 1, the program crashes, causing a segmentation fault.
  */
-int main(int argc, char *argv[])
+int 
+main(int argc, char *argv[])
 {
 	int opt;
+	int ret;
 	int crash;
  	char *input;
 	struct a_struct *x;
@@ -65,21 +79,36 @@ int main(int argc, char *argv[])
 	}
 
 	if (crash == 0) {
+		/* do not crash the program */
+		/* malloc and check if ok */
 		x = malloc(sizeof(struct a_struct));
 		if (x == NULL) {
 			printf("allocation error -- malloc returns NULL\n");
 			goto l_exit;
 		}
-		x->str_content = input;
-		printf("the struct contains the str_content '%s'\n", x->str_content);
+
+		ret = set_struct(x, input);		
+
+		if (ret == 0)
+			printf("the struct contains the str_content '%s'\n", x->str_content);
+
+		/* do not forget to free the allocated memory region for x */
 		free(x);
 		goto l_exit;
 	} else if (crash == 1) {
+		/* crash the program and cause a segmentation fault */
+		/* where does x point to? */
 		x = NULL;
-		x->str_content = input;
-		printf("the struct contains the str_content '%s'\n", x->str_content);
+
+		/* why does this line of code cause the segmentation fault? */
+		ret = set_struct(x, input);
+
+		if (ret == 0)
+			printf("the struct contains the str_content '%s'\n", x->str_content);
+
 		goto l_exit;
 	} else {
+		/* just in case */
 		printf("undefined input\n");
 		goto l_exit;
 	}
