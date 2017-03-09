@@ -14,11 +14,17 @@ nogdb_seg:
 gdb_seg:
 	gcc gdb_seg.c $(CFLAGS) $(DEBUG) -o gdb_seg
 
-gdb_nosymbols:
-	gdb nogdb_seg --args "-c 1 -i foo"
+nogdb_nocrash:
+	./nogdb_seg -c 0 -i foo
 
-gdb_symbols:
-	gdb ./gdb_seg --args "-c 1 -i foo"
+nogdb_crash:
+	./nogdb_seg -c 1 -i foo
+
+gdb_nodebugsymbols:
+	gdb --args ./nogdb_seg -c 1 -i foo
+
+gdb_debugsymbols:
+	gdb --args ./gdb_seg -c 1 -i foo
 
 clean:
 	rm -rf nogdb_seg gdb_seg
