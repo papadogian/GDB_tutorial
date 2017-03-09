@@ -28,10 +28,8 @@ struct a_struct {
 int
 set_struct(struct a_struct *x, char *str)
 {
-	if ((x->str_content = str))
-		return 0;
-	else 
-		return -1;
+	x->str_content = str;
+	return 0;
 }
 
 /*
