@@ -1,4 +1,6 @@
 # A Makefile for the GDB tutorial (beginner's)
+# Course: CS255
+# Spring semester 2017
 # TA: Eva Papadogiannaki (papadogian)
 
 CFLAGS=-Wall -ansi -pedantic
@@ -20,4 +22,3 @@ gdb_symbols:
 
 clean:
 	rm -rf nogdb_seg gdb_seg
-

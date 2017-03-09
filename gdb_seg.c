@@ -5,7 +5,7 @@
  *
  * Course: CS255
  * Spring semester 2017
- * TA: papadogian
+ * TA: Eva Papadogiannaki (papadogian)
  */
 
 #include <stdio.h>
