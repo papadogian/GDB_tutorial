@@ -4,7 +4,7 @@
 # TA: Eva Papadogiannaki (papadogian)
 
 CFLAGS=-Wall -ansi -pedantic
-DEBUG=-g
+DEBUG=-g # to use GDB, *always* compile with -g
 
 all: nogdb_seg gdb_seg
 
@@ -14,17 +14,26 @@ nogdb_seg:
 gdb_seg:
 	gcc gdb_seg.c $(CFLAGS) $(DEBUG) -o gdb_seg
 
+# run and don not crash
 nogdb_nocrash:
 	./nogdb_seg -c 0 -i foo
 
+# run and crash
 nogdb_crash:
 	./nogdb_seg -c 1 -i foo
 
-gdb_nodebugsymbols:
+# run with GDB without debug symbols
+gdb_crash_no_debug_symbols:
 	gdb --args ./nogdb_seg -c 1 -i foo
 
-gdb_debugsymbols:
+# run with GDB with debug symbols
+gdb_crash_debug_symbols:
 	gdb --args ./gdb_seg -c 1 -i foo
+
+# run with GDB without crashing (with debug symbols)
+gdb_nocrash_debug_symbols:
+	gdb --args ./gdb_seg -c 0 -i foo
 
 clean:
 	rm -rf nogdb_seg gdb_seg
+
