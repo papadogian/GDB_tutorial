@@ -53,9 +53,16 @@ int main(int argc, char *argv[])
 		default: /* print usage for anything else that is not valid */
 		    	printf("Usage: %s [-c] crash (use values: 0 or 1) [-i] input\n", 
 				argv[0]);
-		    goto l_exit;
+		    	goto l_exit;
 		}
 	    }
+
+	/* print usage and exit if no input is given */
+	if (argc == 1) {
+		printf("Usage: %s [-c] crash (use values: 0 or 1) [-i] input\n", 
+			argv[0]);
+		goto l_exit;
+	}
 
 	if (crash == 0) {
 		x = malloc(sizeof(struct a_struct));
