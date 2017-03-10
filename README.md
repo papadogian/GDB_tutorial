@@ -48,7 +48,7 @@
 
   * To set a breakpoint to line number Y, type:
 
-	`b[reak] Y`
+	`break Y` or `b Y`
 
   * To set a breakpoint to line number Y of file FILENAME, type:
 
@@ -60,7 +60,7 @@
 
   * To inspect all the breakpoints, type:
 
-	`i[nfo] b[reak]`
+	`info b[reak]` or `i b[reak]`
 
   * To disable a breakpoint with number Z, type:
 
@@ -79,12 +79,18 @@
 
   * To delete all breakpoints, just type:
 
-	`delete`
+	`d[elete]` 
 
   * To inspect the source code around line X, type:
 
-	`l[ist] X`
+	`list X` or `l X`
 
   * To inspect the source code around line X of file FILENAME, type:
 
 	`l[ist] FILENAME:X`
+
+  * When a breakpoint is reached, the execution of the program stops to allow 
+    inspection. Use the following:
+
+	`continue` or `c` to continue the execution until the end, another 
+	breakpoint or a signal (e.g. SIGSEG).
