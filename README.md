@@ -28,4 +28,14 @@
 	
 	`gdb --args ./gdb_seg -c 0 -i foo` 
 
+- - - - 
+
+* Now... While in gdb:
+
+  * To run your program, type: 
+
+	`run _arg1_ _arg2_ ... _argN_` or `r _arg1_ _arg2_ ... _argN_`
+
+  * _If you have used the --args already, just type r[un]_
+
 
