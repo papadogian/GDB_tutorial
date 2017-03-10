@@ -36,7 +36,7 @@
 
 	`run _arg1_ _arg2_ ... _argN_` or `r _arg1_ _arg2_ ... _argN_`
 
-  * _If you have used the --args already, just type r[un]_
+  	_If you have used the --args already, just type:_ `r[un]`
 
   * To print a variable named X, type:
 
@@ -44,4 +44,4 @@
 
   * To set the value 5 to an integer variable X, type:
 
-	`set variable X = 5` (Print again X. Is it 5? Cool!)
+	`set variable X = 5` _(Print again X. Is it 5? Cool!)_
