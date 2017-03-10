@@ -50,6 +50,14 @@
 
 	`b[reak] Y`
 
+  * To set a breakpoint to line number Y of file FILENAME, type:
+
+	`b[reak] FILENAME:Y`
+
+  * To set a breakpoint at every function FNAME invocation, type:
+
+	`b[reak] FNAME`
+
   * To inspect all the breakpoints, type:
 
 	`i[nfo] b[reak]`
@@ -63,4 +71,20 @@
 	`enable Z`
 
 	_After enabling or disabling a breakpoint, type `info break` (the 
-	equivalent field named 'Enb' is either 'y' or 'n')_
+	equivalent field named 'Enb' is either 'y' or 'n')._
+
+  * To delete a breakpoint with number Z, type:
+
+	`delete Z` or `d Z`
+
+  * To delete all breakpoints, just type:
+
+	`delete`
+
+  * To inspect the source code around line X, type:
+
+	`l[ist] X`
+
+  * To inspect the source code around line X of file FILENAME, type:
+
+	`l[ist] FILENAME:X`
