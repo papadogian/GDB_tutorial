@@ -103,6 +103,10 @@
 	`next` or `n` to execute the next instruction (`next` does not step into 
 	function calls; it executes and stops).
 
+  * To backtrace the call stack, type:
+
+	`backtrace` or `bt`
+
   * Misc.:
 
 	1. _Ctrl - C_ to interrupt your program (e.g. in cases of infinite loops, 
