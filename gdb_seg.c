@@ -28,6 +28,9 @@ struct a_struct {
 int
 set_struct(struct a_struct *x, char *str)
 {
+	/* in order not to cause a segmentation fault, 
+	   what should we do before the following assignment? */
+	/* hint: where does the given pointer x point to? */
 	x->str_content = str;
 	return 0;
 }
@@ -98,7 +101,6 @@ main(int argc, char *argv[])
 		/* where does x point to? */
 		x = NULL;
 
-		/* why does this line of code cause the segmentation fault? */
 		ret = set_struct(x, input);
 
 		if (ret == 0)
@@ -114,8 +116,6 @@ main(int argc, char *argv[])
 
 /* label to exit: print and finish */
 l_exit:
-	
-	/* sleep(6); */
 
 	printf("main exits now.\n");
 	return 0;
