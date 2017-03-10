@@ -105,15 +105,21 @@
 
   * Misc.:
 
-	_Ctrl - C_ to interrupt your program (e.g. in cases of infinite loops, 
+	1. _Ctrl - C_ to interrupt your program (e.g. in cases of infinite loops, 
 	race conditions, etc.).
 
-	To quit gdb, type: 
+	2. To quit gdb, type: 
 
 	`quit` or `q` 
 
-	To navigate through previously issued commands, press the _up_ key. 
+	3. To navigate through previously issued commands, press the _up_ key. 
 
-	To repeat the latest command, just press _Enter_.
+	4. To repeat the latest command, just press _Enter_.
+
+- - - - 
+
+Course's website: http://www.csd.uoc.gr/~hy255/
+TA: _Eva Papadogiannaki_
+Contact me: papadogian [at] csd [dot] uoc [dot] gr
 
 
