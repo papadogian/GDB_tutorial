@@ -3,7 +3,7 @@
 
 * Compile the source code of file 'gdb\_seg.c' normally without debug symbols:
 	
-	`make nogdb_seg` or `gcc gdb_seg.c -Wall -ansi -pedantic -o gdb_seg`
+	`make nogdb_seg` or `gcc gdb_seg.c -Wall -ansi -pedantic -o nogdb_seg`
 
 * Compile the source code of file 'gdb\_seg.c' with debug symbols:
 
