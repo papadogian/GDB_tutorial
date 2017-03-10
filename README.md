@@ -7,7 +7,7 @@
 
 * Compile the source code of file 'gdb\_seg.c' with debug symbols:
 
-	`make nogdb_seg` or `gcc gdb_seg.c -Wall -ansi -pedantic -g -o gdb_seg`
+	`make gdb_seg` or `gcc gdb_seg.c -Wall -ansi -pedantic -g -o gdb_seg`
 
 	_Use *always* -g when you want to run gdb. To avoid performance 
 	degradation remove -g flag before compilation._
