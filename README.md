@@ -16,7 +16,7 @@
 
 	`./gdb_seg -c 0 -i foo`
 
-* Crash the executable:
+* Crash the executable (:poop:): 
 
 	`./gdb_seg -c 1 -i foo`
 
