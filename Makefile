@@ -8,9 +8,11 @@ DEBUG=-g # to use GDB, *always* compile with -g
 
 all: nogdb_seg gdb_seg
 
+# compile without producing debug symbols
 nogdb_seg:
 	gcc gdb_seg.c $(CFLAGS) -o nogdb_seg
 
+# compile producing debug symbols
 gdb_seg:
 	gcc gdb_seg.c $(CFLAGS) $(DEBUG) -o gdb_seg
 
@@ -35,5 +37,5 @@ gdb_nocrash_debug_symbols:
 	gdb --args ./gdb_seg -c 0 -i foo
 
 clean:
-	rm -rf nogdb_seg gdb_seg
+	rm --force nogdb_seg gdb_seg 
 
