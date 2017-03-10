@@ -93,4 +93,14 @@
     inspection. Use the following:
 
 	`continue` or `c` to continue the execution until the end, another 
-	breakpoint or a signal (e.g. SIGSEG).
+	breakpoint or a signal (e.g. SIGSEGV).
+
+	`finish` or `f` to continue the execution until it returns.
+
+	`step` or `s` to execute the next instruction (steps also into function 
+	calls).
+	
+	`next` or `n` to execute the next instruction (`next` does not step into 
+	function calls; it executes it and stops).
+
+
