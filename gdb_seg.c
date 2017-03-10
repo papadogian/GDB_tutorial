@@ -23,7 +23,7 @@ struct a_struct {
 
 /*
  * Set the str_content of struct x with str.
- * If success, return 0, otherwise return -1.
+ * If success, return 0.
  */
 int
 set_struct(struct a_struct *x, char *str)
@@ -87,7 +87,8 @@ main(int argc, char *argv[])
 		ret = set_struct(x, input);		
 
 		if (ret == 0)
-			printf("the struct contains the str_content '%s'\n", x->str_content);
+			printf("the struct contains the str_content '%s'\n", 
+				x->str_content);
 
 		/* do not forget to free the allocated memory region for x */
 		free(x);
@@ -101,7 +102,8 @@ main(int argc, char *argv[])
 		ret = set_struct(x, input);
 
 		if (ret == 0)
-			printf("the struct contains the str_content '%s'\n", x->str_content);
+			printf("the struct contains the str_content '%s'\n", 
+				x->str_content);
 
 		goto l_exit;
 	} else {
@@ -112,7 +114,8 @@ main(int argc, char *argv[])
 
 /* label to exit: print and finish */
 l_exit:
-	/*sleep(6);*/
+	
+	/* sleep(6); */
 
 	printf("main exits now.\n");
 	return 0;
