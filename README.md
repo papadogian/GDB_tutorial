@@ -122,7 +122,7 @@
 
 Course's website: http://www.csd.uoc.gr/~hy255/
 
-GDB website: https://www.gnu.org/software/gdb/
+GDB's website: https://www.gnu.org/software/gdb/
 
 GDB's manual (online): https://linux.die.net/man/1/gdb
 
