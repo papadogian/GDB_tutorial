@@ -62,5 +62,5 @@
 
 	`enable Z`
 
-	_After enabling or disabling a breakpoint, type info break (the 
-	equivalent field named En is either 'y' or 'n')_
+	_After enabling or disabling a breakpoint, type `info break` (the 
+	equivalent field named 'Enb' is either 'y' or 'n')_
