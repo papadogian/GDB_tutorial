@@ -38,4 +38,10 @@
 
   * _If you have used the --args already, just type r[un]_
 
+  * To print a variable named X, type:
 
+	`print X` or `p X`
+
+  * To set the value 5 to an integer variable X, type:
+
+	`set variable X = 5` (Print again X. Is it 5? Cool!)
