@@ -118,23 +118,19 @@
 
 - - - - 
 
-Links:
+###Links:
 
 Course's website: http://www.csd.uoc.gr/~hy255/
 
 GDB website: https://www.gnu.org/software/gdb/
 
-GDB's manual (online): 
+GDB's manual (online): https://linux.die.net/man/1/gdb
 
-	https://linux.die.net/man/1/gdb
-
-GDB's manual: 
-
-	`man gdb`
+GDB's manual: `man gdb`
 
 - - - - 
 
-TA: _Eva Papadogiannaki_
+###_Eva Papadogiannaki_
 
 Contact me: papadogian [at] csd [dot] uoc [dot] gr
 
